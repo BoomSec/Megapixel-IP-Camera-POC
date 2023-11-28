@@ -15,6 +15,7 @@ _If you don't want your time wasted the credentials that come default with mode 
 ```bash
 admin
 ```
+
 _with no password (just leave that prompt blank)_
 
 ---

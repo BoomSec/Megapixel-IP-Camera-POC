@@ -64,6 +64,33 @@ _See my first attempt below. Where I run the code and point it at my list of <de
 python CameraExploit.py TargetCameras.txt
 ```
 
+## Note for Users Finding a Repository URL Displayed on Their Cameras
+
+If you have discovered a repository URL displayed on your camera, it is possible that your camera may be vulnerable. This could be due to default credentials being used or other security vulnerabilities.
+
+### What to Do If You Suspect Your Camera May Be Vulnerable
+
+If you have found this repository from a link displayed on your camera and are concerned about the security of your device, we advise the following steps:
+
+1. **Immediate Action**:
+   - Disconnect the camera from the network to prevent unauthorized access.
+   - If possible, change the default credentials or passwords associated with the camera.
+
+2 **Review the Documentation**:
+   - Refer to the user manual or documentation for your camera model to find instructions on securing and updating its settings.
+
+3. **Contact the Manufacturer**:
+   - Reach out to the manufacturer or vendor of the camera for guidance on securing your device and addressing potential vulnerabilities.
+
+4. **Stay Informed**:
+   - Regularly check for firmware updates and security advisories for your camera model.
+
+### Important Note
+
+It is crucial to ensure the security of your devices, especially those with network connectivity. We strongly emphasize the importance of securing your devices to prevent unauthorized access and unauthorized use.
+
+If you have any concerns or questions, please seek guidance from qualified professionals or security experts.
+
 ## Disclaimer
 
 This script is intended for educational and proof of concept purposes only. It is crucial to emphasize that accessing security cameras without proper authorization is illegal and unethical. The use of this code to exploit security cameras that do not belong to you is strictly prohibited and may result in legal consequences.
@@ -72,4 +99,4 @@ By using this code, you agree that you will only use it in controlled environmen
 
 The author of this script is not responsible for any misuse or unlawful use of this code.
 
----
+

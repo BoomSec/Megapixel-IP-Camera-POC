@@ -1,4 +1,4 @@
-# Megapixel IP Camera Default Credentials Exploitation Proof of Concept
+# Megapixel IP Camera Default Credentials Exploit POC
 
 This Python script is a proof of concept for exploiting default credentials in Megapixel IP Cameras. 
 The code attempts to change a visual setting on the security camera by sending a network request using a provided list of IP addresses and ports and default credentials.

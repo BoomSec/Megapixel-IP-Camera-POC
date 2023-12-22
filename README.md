@@ -64,9 +64,9 @@ _See my first attempt below. Where I run the code and point it at my list of <de
 python CameraExploit.py TargetCameras.txt
 ```
 
-## Note for Users Finding the URL of this Repository Displayed on Their Cameras
+## Note for Users Finding a Repository URL Displayed on Their Cameras
 
-If you have discovered the URL of this github repo displayed on your camera, it is possible that your camera may be vulnerable. This could be due to default credentials being used or other security vulnerabilities.
+If you have discovered a repository URL displayed on your camera, it is possible that your camera may be vulnerable. This could be due to default credentials being used or other security vulnerabilities.
 
 ### What to Do If You Suspect Your Camera May Be Vulnerable
 

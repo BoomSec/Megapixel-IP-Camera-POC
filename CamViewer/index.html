@@ -1,123 +1,132 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cam Viewer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-   body {
-           font-family: 'Arial', sans-serif;
-           margin: 10px;
-           background-color: #f4f4f4;
-         }
-         
-         h1 {
-           color: #333;
-           text-align: center;
-           margin-bottom: 10px;
-         }
-         
-         label {
-           display: block;
-           margin-top: 10px;
-         }
-         
-         input, select {
-           width: 100%;
-           padding: 12px;
-           font-size: 16px;
-           margin-bottom: 10px;
-           box-sizing: border-box;
-         }
-         
-         button {
-           width: 100%;
-           padding: 12px;
-           font-size: 18px;
-           background-color: #4CAF50;
-           color: white;
-           border: none;
-           cursor: pointer;
-           box-sizing: border-box;
-         }
-         
-         #messageContainer {
-           margin-top: 10px;
-           color: #333;
-           text-align: center;
-           height: 40px;
-           line-height: 40px;
-         }
-         
-         #progressMessage {
-           font-size: 16px;
-         }
-         
-         #imageContainer {
-           width: 100%;
-           box-sizing: border-box;
-           margin-bottom: 10px; /* Add some margin at the bottom */
-         }
-         
-         #image {
-           max-width: 100%; /* Make the image responsive */
-           height: auto;
-           display: none;
-           border-radius: 8px;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         }
-         
-         #infoContainer {
-           width: 100%;
-           box-sizing: border-box;
-           margin-top: 10px; /* Add margin between image and table */
-         }
-         
-         #infoTable {
-           width: 100%;
-           border-collapse: collapse;
-           margin-top: 10px;
-         }
-         
-         #infoTable th, #infoTable td {
-           border: 1px solid #ddd;
-           padding: 8px;
-           text-align: left;
-           white-space: nowrap;
-           overflow: hidden;
-           text-overflow: ellipsis;
-         }
-         
-         /* Clean up table style */
-         #infoTable th {
-           background-color: #f2f2f2;
-         }
-         
-         #infoTable td {
-           background-color: #fff;
-           word-break: break-word; /* Break words to the next line if they exceed the width */
-           max-width: 200px; /* Adjust the maximum width as needed */
-         }
-         
-         /* Media query for small screens */
-         @media screen and (min-width: 768px) {
-           #imageContainer {
-             width: calc(70% - 10px);
-             float: left;
-             margin-right: 10px;
-           }
-         
-           #infoContainer {
-             width: calc(30% - 10px);
-             float: left;
-             margin-top: 0; /* Remove margin between image and table on larger screens */
-           }
-         }
-         
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 10px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    #messageContainer {
+      margin-top: 10px;
+      color: #333;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    #progressMessage {
+      font-size: 16px;
+    }
+
+    #imageContainer {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      /* Add some margin at the bottom */
+    }
+
+    #image {
+      max-width: 100%;
+      /* Make the image responsive */
+      height: auto;
+      display: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #infoContainer {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      /* Add margin between image and table */
+    }
+
+    #infoTable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    #infoTable th,
+    #infoTable td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Clean up table style */
+    #infoTable th {
+      background-color: #f2f2f2;
+    }
+
+    #infoTable td {
+      background-color: #fff;
+      word-break: break-word;
+      /* Break words to the next line if they exceed the width */
+      max-width: 200px;
+      /* Adjust the maximum width as needed */
+    }
+
+    /* Media query for small screens */
+    @media screen and (min-width: 768px) {
+      #imageContainer {
+        width: calc(70% - 10px);
+        float: left;
+        margin-right: 10px;
+      }
+
+      #infoContainer {
+        width: calc(30% - 10px);
+        float: left;
+        margin-top: 0;
+        /* Remove margin between image and table on larger screens */
+      }
+    }
   </style>
 </head>
+
 <body>
   <h1>Cam Viewer</h1>
   <label for="uploadInput">Upload IP File:</label>
@@ -131,96 +140,96 @@
     <div id="progressMessage"></div>
   </div>
   <div id="imageContainer">
-    <img id="image" src="#" alt="cam"/>
+    <img id="image" src="#" alt="cam" onload="changeImage()">
   </div>
   <div id="infoContainer">
     <table id="infoTable"></table>
   </div>
 
-<script>
-  var selectedIp;
-  var timer;
-  var isFirstLoad = true;
-  var ipInfo; // Variable to store IP information
+  <script>
+    var selectedIp;
+    var timer;
+    var isFirstLoad = true;
+    var ipInfo; // Variable to store IP information
 
-  function handleFileSelect() {
-    var uploadInput = document.getElementById("uploadInput");
-    var file = uploadInput.files[0];
+    function handleFileSelect() {
+      var uploadInput = document.getElementById("uploadInput");
+      var file = uploadInput.files[0];
 
-    if (file) {
-      var reader = new FileReader();
+      if (file) {
+        var reader = new FileReader();
 
-      reader.onload = function (e) {
-        var content = e.target.result;
-        processFileContent(content);
-      };
+        reader.onload = function (e) {
+          var content = e.target.result;
+          processFileContent(content);
+        };
 
-      reader.readAsText(file);
+        reader.readAsText(file);
+      }
     }
-  }
 
-  function processFileContent(content) {
+    function processFileContent(content) {
       var ips = content.split('\n').filter(function (ip) {
         return ip.trim() !== '';
       });
-  
+
       populateDropdown(ips);
-  
+
       // Trigger the changeImage function after processing the file content
       changeImage();
     }
 
-  function populateDropdown(ips) {
-    var dropdown = document.getElementById("ipDropdown");
-    dropdown.innerHTML = '';
+    function populateDropdown(ips) {
+      var dropdown = document.getElementById("ipDropdown");
+      dropdown.innerHTML = '';
 
-    for (var i = 0; i < ips.length; i++) {
-      var option = document.createElement("option");
-      option.text = ips[i];
-      dropdown.add(option);
+      for (var i = 0; i < ips.length; i++) {
+        var option = document.createElement("option");
+        option.text = ips[i];
+        dropdown.add(option);
+      }
+
+      if (ips.length > 0) {
+        selectedIp = ips[0];
+        dropdown.value = selectedIp;
+        changeImage();
+      }
     }
 
-    if (ips.length > 0) {
-      selectedIp = ips[0];
-      dropdown.value = selectedIp;
-      changeImage();
+    function imageloop() {
+      var key = (new Date()).getTime();
+      var imageSrc = "http://" + selectedIp + "/jpgmulreq/1/image.jpg?key=" + key + "&lq=12";
+      var image = document.getElementById("image");
+      var progressMessage = document.getElementById("progressMessage");
+
+      if (isFirstLoad) {
+        progressMessage.textContent = "Loading...";
+      } else {
+        progressMessage.textContent = "Image Loaded!"; // Remove IP information after the first load
+      }
+
+      image.onload = function () {
+        image.style.display = "block";
+        isFirstLoad = false;
+        timer = setTimeout(imageloop, 500);
+      };
+
+      image.src = imageSrc;
     }
-  }
 
-  function imageloop() {
-    var key = (new Date()).getTime();
-    var imageSrc = "https://" + selectedIp + "/jpgmulreq/1/image.jpg?key=" + key + "&lq=12";
-    var image = document.getElementById("image");
-    var progressMessage = document.getElementById("progressMessage");
+    function fetchIpInfo(ip) {
+      // Extract IP address without the port
+      const ipAddress = ip.split(":")[0];
 
-    if (isFirstLoad) {
-      progressMessage.textContent = "Loading...";
-    } else {
-      progressMessage.textContent = "Image Loaded!"; // Remove IP information after the first load
+      // Use the IP address to fetch information
+      var apiUrl = "https://ipapi.co/" + ipAddress + "/json/";
+
+      return fetch(apiUrl)
+        .then(response => response.json())
+        .catch(error => console.error("Failed to fetch IP information", error));
     }
 
-    image.onload = function () {
-      image.style.display = "block";
-      isFirstLoad = false;
-      timer = setTimeout(imageloop, 500);
-    };
-
-    image.src = imageSrc;
-  }
-
-  function fetchIpInfo(ip) {
-    // Extract IP address without the port
-    const ipAddress = ip.split(":")[0];
-  
-    // Use the IP address to fetch information
-    var apiUrl = "https://ipapi.co/" + ipAddress + "/json/";
-  
-    return fetch(apiUrl)
-      .then(response => response.json())
-      .catch(error => console.error("Failed to fetch IP information", error));
-  }
-
- function displayIpInfo(ipInfo) {
+    function displayIpInfo(ipInfo) {
       var ipInfoContainer = document.getElementById("infoTable");
       ipInfoContainer.innerHTML = `
         <tr><td>IP:</td><td>${ipInfo.ip}</td></tr>
@@ -230,41 +239,22 @@
         <tr><td>ASN:</td><td>${ipInfo.asn}</td></tr>
         <tr><td>Org:</td><td>${ipInfo.org}</td></tr>
       `; // Clear previous content
-
-
-  var tbody = document.createElement("tbody");
-
-  for (var key in ipInfo) {
-    // Skip displaying the port information
-    if (key.toLowerCase() === "port") {
-      continue;
     }
 
-    var row = document.createElement("tr");
-    var th = document.createElement("th");
-    th.textContent = key;
-    var td = document.createElement("td");
-    td.textContent = ipInfo[key];
-    row.appendChild(th);
-    row.appendChild(td);
-    tbody.appendChild(row);
-  }
-
-  table.appendChild(tbody);
-  ipInfoContainer.appendChild(table);
-}
-  function changeImage() {
-    selectedIp = document.getElementById("ipDropdown").value;
-    clearTimeout(timer);
-    isFirstLoad = true;
-
-    var image = document.getElementById("image");
-    var progressMessage = document.getElementById("progressMessage");
-
-    image.style.display = "none";
-    progressMessage.textContent = ""; // Clear any previous message
-
-    if (!ipInfo) {
+    function changeImage() {
+      selectedIp = document.getElementById("ipDropdown").value;
+      clearTimeout(timer);
+      isFirstLoad = true;
+    
+      var image = document.getElementById("image");
+      var progressMessage = document.getElementById("progressMessage");
+    
+      image.style.display = "none";
+      progressMessage.textContent = ""; // Clear any previous message
+    
+      // Reset ipInfo when a new image is requested
+      ipInfo = null;
+    
       fetchIpInfo(selectedIp)
         .then((data) => {
           ipInfo = data;
@@ -274,26 +264,25 @@
         .catch((error) => {
           console.error(error);
         });
-    } else {
-      imageloop();
     }
-  }
-
-  window.onload = function () {
-    // Check if there's a file uploaded, otherwise, use the contents of Samples.tx
-
-    var uploadInput = document.getElementById("uploadInput");
     
-    
-    if (uploadInput.files.length === 0) {
-      fetch("Samples.txt")
-        .then(response => response.text())
-        .then(content => processFileContent(content))
-        .catch(error => console.error("Failed to fetch Samples.txt", error));
-    } else {
-      handleFileSelect();
-    }
-  };
-</script>
+
+    window.onload = function () {
+      // Check if there's a file uploaded, otherwise, use the contents of Samples.tx
+
+      var uploadInput = document.getElementById("uploadInput");
+
+
+      if (uploadInput.files.length === 0) {
+        fetch("Samples.txt")
+          .then(response => response.text())
+          .then(content => processFileContent(content))
+          .catch(error => console.error("Failed to fetch Samples.txt", error));
+      } else {
+        handleFileSelect();
+      }
+    };
+  </script>
 </body>
+
 </html>

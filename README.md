@@ -91,6 +91,17 @@ It is crucial to ensure the security of your devices, especially those with netw
 
 If you have any concerns or questions, please seek guidance from qualified professionals or security experts.
 
+## Web Interface
+
+The web interface designed for the Megapixel IP Camera is in response to McBazza's suggestion in Issue #1 
+
+## Hosting Limitation
+
+Please note that due to the web page making requests to HTTP addresses while being hosted on a HTTPS site, hosting the web interface on github.io has resulted in a multitude of errors. As a result, I am currently unable to host the page on github.io so you will unfortunately have to byo hosting system.
+
+_For me I have tested and put the files on a Raspberry Pi I have that is hosting pi-hole at the moment, so if you have one handy its a perfect candidate to host locally :D_
+
+
 ## Disclaimer
 
 This script is intended for educational and proof of concept purposes only. It is crucial to emphasize that accessing security cameras without proper authorization is illegal and unethical. The use of this code to exploit security cameras that do not belong to you is strictly prohibited and may result in legal consequences.

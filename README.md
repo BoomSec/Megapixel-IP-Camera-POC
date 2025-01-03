@@ -58,8 +58,6 @@ _Also be sure to make a note of the text file name so you don't forget it. We ar
 _Now the moment we have been all waiting for H4CkerMan Time™_
 _Time to run the script. You can do this by calling the script with the name of your text file containing the ip address/addresses_
 
-_See my first attempt below. Where I run the code and point it at my list of <del>victims</del> I mean personally owned network based security cameras. That you have explicit access or permission to use_
-
 ```bash
 python CameraExploit.py TargetCameras.txt
 ```
